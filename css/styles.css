@@ -1,0 +1,511 @@
+@font-face {
+    font-family: 'RadioGrostesk', sans-serif;
+    src: url(fonts/PPRadioGrotesk-Regular.woff2);
+}
+
+.my-element{
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 100%;
+    cursor: crosshair;
+}
+
+
+
+.header {
+    font-family: 'RadioGrostesk', sans-serif;
+    color: var(--tertiary-color);
+    background-color: var(--cuaternary-color);
+}
+
+.header-gray {
+    font-family: 'RadioGrostesk', sans-serif;
+    color: var(--tertiary-color);
+    background-color: var(--another-color);
+}
+
+
+body {
+    font-family: 'RadioGrostesk', sans-serif;
+    color: var(--tertiary-color);
+    background-color: var(--cuaternary-color);
+    
+}
+
+:root {
+    --primary-color: #FFFF00;
+    --secondary-color: #ffffff;
+    --tertiary-color: #000;
+    --another-color: #959595;
+}
+
+@media(max-width: 992px) {
+    :root {
+        font-size: 15px;
+    }
+}
+
+@media(max-width: 576px) {
+    :root {
+        font-size: 14px;
+    }
+}
+
+.yellow {
+    background-color: var(--primary-color);
+}
+
+.black {
+    background-color: var(--tertiary-color);
+}
+
+.white {
+    background-color: var(--secondary-color);
+}
+
+.black {
+    background-color: var(--tertiary-color);
+}
+
+.gray{
+    background-color: var(--another-color);
+}
+
+/* ========== Palavras homepage ========== */
+
+@media screen and (max-width: 768px) {
+    .tooltip {
+        font-size: 0.8em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .tooltip {
+        font-size: 0.6em;
+    }
+}
+
+/* ========== Grid ========== */
+
+.container-fluid {
+    padding: 0 2rem;
+}
+
+@media(max-width: 992px) {
+    .container-fluid {
+        padding: 0 1.5rem;
+    }
+}
+
+.row {
+    --bs-gutter-x: 1.5rem;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* ========== Header  ========== */
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    height: 6rem;
+    background-color: var(--primary-color);
+    z-index: 99;
+    font-size: 3rem;
+}
+
+@media(max-width: 992px) {
+    header {
+        font-size: 2rem;
+        padding: 0 1.5rem;
+    }
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+/* ========== Main ========== */
+
+main {
+    width: 100%;
+    min-height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+}
+
+
+main.projects {
+    width: 100%;
+    padding-top: 3rem;
+    margin-top: 3rem;
+}
+
+.main.single {
+    padding-top: 12rem;
+}
+
+@media(max-width: 992px) {
+    main.projects {
+        padding-top: 1.5rem;
+    }
+
+    main.about {
+        padding: 1.5rem 0;
+    }
+
+    .main-single {
+        padding: 1.5rem 0;
+    }
+}
+
+/* ========== Home ========== */
+
+main.home {
+    display: flex;
+    align-items: flex-end; 
+    justify-content: center;
+    height: 100vh; 
+    width: 100vw;
+    padding: 0;
+    overflow: hidden; 
+}
+
+main.home .home-image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+main.home .home-image img {
+    width: 100%;
+    height: auto;
+    max-height: 100vh; 
+    object-fit: contain; 
+    display: block;
+}
+
+
+/* main * palavras */
+
+.main.home .home-image{
+    position: relative;
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    background-color: var(--secondary-color);
+    color: var(--tertiary-color);
+    padding: 0.5px;
+    font-size: 3rem;
+    pointer-events: none;
+    z-index: 1;
+}
+
+main.home .home-image:hover .tooltip {
+    display: block;
+}
+
+@media(max-width: 992px) {
+    .tooltip {
+        font-size: 1.5rem;
+    }
+    main.home .home-image:hover .tooltip {
+        display: none;
+    }
+}
+
+.top-left {
+    top: 57%;
+    left: 18%;
+}
+
+.top-right {
+    top: 57%;
+    right: 10%;
+}
+
+.bottom-left {
+    bottom: 10%;
+    left: 13%;
+}
+
+.bottom-right {
+    bottom: 10%;
+    right: 30%;
+}
+
+
+/* ========== Project * Card ========== */
+
+.projects .card{
+    margin-bottom: 2rem;
+}
+
+@media(max-width: 992px) {
+    .projects .card{
+        margin-bottom: 2rem;
+    }
+}
+
+.projects .card-image {
+    width: 100%;
+    padding-bottom: 60%;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 1rem;
+    filter: grayscale(100%);
+    transition: all .2s ease;
+    -webkit-filter: grayscale(100%);
+    border-radius: 10px;
+}
+
+.projects .card-image2 {
+    width: 100%;
+    padding-bottom: 60%;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+
+}
+
+.projects .card-image3 {
+    width: 100%;
+    padding-bottom: 60%;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+
+}
+
+@media(max-width: 992px) {
+    .projects .card-image {
+        margin-bottom: .5rem;
+    }
+}
+
+.projects .card-image:hover {
+    width: 100%;
+    padding-bottom: 60%;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 1.5rem;
+    filter: none;
+    -webkit-filter: grayscale(0);
+    transform: scale(1.1);
+}
+
+.projects .card-title {
+    font-family: 'RadioGrostesk', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    width: fit-content;
+    height: fit-content;
+    padding: 0rem;
+    margin: 0;
+    border-radius: 10px;
+
+}
+
+@media(max-width: 992px) {
+    .projects .card-title {
+        font-size: 2rem;
+    }
+}
+
+/* ========== Single ========== */
+
+.single-info {
+    position: sticky;
+    top: 9rem;
+}
+
+@media(max-width: 992px) {
+    .single-info {
+        top: 8.5rem;
+    }
+}
+
+@media(max-width: 576px) {
+    .single-info {
+        position: static;
+        margin-top: 5rem;
+    }
+}
+
+.single-title {
+    font-size: 3rem;
+    line-height: 3rem;
+    margin-bottom: 1rem;
+    width: fit-content;
+    height: fit-content;
+    margin: 0;
+}
+
+.single-image {
+    margin-top: 10rem;
+    list-style: none;
+    border-radius: 10px;
+}
+
+.single-gif {
+    display: block;
+    margin: 20px auto; 
+    max-width: 100%; 
+    border-radius: 10px;
+}
+
+@media(max-width: 992px) {
+    .single-title {
+        font-size: 2rem;
+        width: fit-content;
+        height: fit-content;
+        margin-bottom: 1rem;
+        margin-top: 1.5rem;
+    }
+
+    .single-image {
+        margin-top: 3rem;
+    }
+}
+
+.primary {
+    margin-top: 2rem;
+}
+
+.single-word {
+    margin-left: 6rem;
+    display: flex;
+    margin-top: -20px;
+}
+
+.single-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.single-image + .single-image {
+    margin-top: 1rem;
+}
+
+.separator {
+    border: none;
+    height: 1px;
+    background-color: var(--tertiary-color);
+    margin: 10px 0;
+}
+
+/* ========== About ========== */
+/* Fotografia */
+
+.hover-container {
+    position: relative;
+    display: inline-block;
+}
+
+.hover-trigger {
+    position: relative;
+    text-decoration: underline;
+}
+
+.hover-image {
+    opacity: 0;
+    position: absolute;
+    top: -120%;
+    left: 50%;
+    rotate: 13deg;
+    max-width: 250px;
+    color: var(--primary-color);
+}
+
+.hover-trigger:hover .hover-image {
+    opacity: 100;
+}
+
+/* About */
+
+.about section {
+    padding: 2rem 0;
+}
+
+.about-text {
+    margin-top: 8rem;
+    font-size: 3rem;
+}
+
+@media(max-width: 992px) {
+    .about-text {
+        font-size: 2rem;
+    }
+}
+
+.about .section-content {
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+.about .section-content-timeline {
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+@media(max-width: 992px) {
+    .about .section-content {
+        font-size: .8rem;
+        line-height: 1rem;
+    }
+
+    .about .section-content-timeline {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+}
+
+.about section+section {
+    margin-top: 1.5rem;
+    margin-bottom: .5rem;
+    border-top: 1.5px solid var(--tertiary-color);
+}
+
+@media(max-width: 992px) {
+    .about section+section {
+        margin-top: 1rem;
+        margin-bottom: .5rem;
+    }
+}
+
+.about .section-content ul {
+    list-style: none;
+}
+
+.about .section-content .about-link:hover {
+    transition: .1s;
+    color: var(--tertiary-color);
+    background-color: var(--another-color);
+}
+
+.section-title {
+    font-size: 1.5rem;
+    text-decoration: underline;
+}
